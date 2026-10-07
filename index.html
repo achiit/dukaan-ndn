@@ -1,0 +1,1245 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D.N. AGENCIES - Authorised Electrical & Appliances Distributor</title>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              red: '#D91B24',
+              'red-dark': '#B8141C',
+              charcoal: '#1A1D20',
+              slate: '#2B3137',
+              muted: '#64748B',
+              surface: '#F8FAFC'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom scrollbar and modal backdrop styling */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    .custom-backdrop {
+      backdrop-filter: blur(4px);
+    }
+    [x-cloak] { display: none !important; }
+  </style>
+</head>
+
+<body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-red selection:text-white">
+
+  <!-- Top Utility Bar -->
+  <header class="bg-brand-charcoal text-slate-300 text-xs py-2 px-4 border-b border-slate-700/50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-4 flex-wrap justify-center">
+        <span class="flex items-center gap-1.5 text-white/90">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-red"></i>
+          Opp. Sant Nagar, Hisar Road, Sirsa (Haryana)
+        </span>
+        <span class="hidden md:inline-block text-slate-500">|</span>
+        <span class="hidden md:flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-slate-400"></i>
+          dnagencies.742@gmail.com
+        </span>
+      </div>
+      <div class="flex items-center gap-4 font-medium">
+        <a href="tel:9354210827" class="hover:text-white transition-colors flex items-center gap-1">
+          <i data-lucide="phone" class="w-3 h-3 text-brand-red"></i> Subhash Mehta: 93542-10827
+        </a>
+        <span class="text-slate-600">·</span>
+        <a href="tel:9812001006" class="hover:text-white transition-colors flex items-center gap-1">
+          <i data-lucide="phone" class="w-3 h-3 text-brand-red"></i> Ankit Mehta: 98120-01006
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Navigation Bar -->
+  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Monogram Logo & Brand -->
+        <a href="#home" class="flex items-center gap-3.5 group">
+          <!-- Stylized Modern 'DN' Monogram -->
+          <div class="relative w-12 h-12 bg-brand-charcoal rounded-xl flex items-center justify-center p-2 shadow-inner group-hover:scale-105 transition-transform duration-300">
+            <svg viewBox="0 0 100 100" class="w-full h-full fill-none">
+              <!-- Background Stylized D -->
+              <path d="M 22 20 L 48 20 C 65 20 74 32 74 50 C 74 68 65 80 48 80 L 22 80 Z" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+              <!-- N Diagonal & Uprights overlapping with Red Accent -->
+              <path d="M 44 80 L 78 20" stroke="#D91B24" stroke-width="10" stroke-linecap="round" />
+              <path d="M 78 20 L 78 80" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" />
+              <!-- Dynamic swoosh slash -->
+              <circle cx="28" cy="50" r="5" fill="#D91B24" />
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-extrabold text-2xl tracking-wider text-brand-charcoal">D.N.</span>
+              <span class="font-extrabold text-2xl tracking-wider text-brand-red">AGENCIES</span>
+            </div>
+            <p class="text-[10px] font-semibold tracking-wider uppercase text-slate-500">Authorised Distributor & Dealer</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-700">
+          <a href="#home" class="hover:text-brand-red transition-colors">Home</a>
+          <a href="#catalog" class="hover:text-brand-red transition-colors">Products</a>
+          <a href="#brands" class="hover:text-brand-red transition-colors">Brands</a>
+          <a href="#about" class="hover:text-brand-red transition-colors">About Us</a>
+          <a href="#contact" class="hover:text-brand-red transition-colors">Contact</a>
+        </div>
+
+        <!-- Right Side: Search and Cart Button -->
+        <div class="flex items-center gap-3">
+          <button onclick="document.getElementById('searchInput').focus(); window.location.href='#catalog';" class="p-2.5 text-slate-600 hover:text-brand-red hover:bg-slate-100 rounded-full transition-colors" title="Search Catalog">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </button>
+
+          <!-- Standard eCommerce Cart Drawer Trigger -->
+          <button id="openCartBtn" onclick="toggleCartDrawer(true)" class="relative flex items-center gap-2 bg-slate-900 text-white px-4 py-2.5 rounded-xl hover:bg-brand-red transition duration-200 shadow-md">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span class="font-medium text-sm hidden sm:inline">Cart</span>
+            <span id="cartCountBadge" class="bg-brand-red text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="relative overflow-hidden bg-gradient-to-br from-brand-charcoal via-slate-900 to-[#121417] text-white py-16 lg:py-24">
+    <!-- Subtle Background Grid Pattern -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-red/20 border border-brand-red/30 text-red-300 text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
+            AUTHORISED WHOLESALE & RETAIL HUB · SIRSA
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+            Premium Home Appliances & Electrical Solutions
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
+            Direct authorised distributor for leading national brands. Serving Sirsa and neighboring districts with genuine products, official manufacturer warranties, and wholesale commercial pricing.
+          </p>
+
+          <div class="pt-2 flex flex-wrap gap-4 items-center">
+            <a href="#catalog" class="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-red-900/40 transition duration-200">
+              <span>Explore Products</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#brands" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3.5 rounded-xl border border-white/20 backdrop-blur transition duration-200">
+              <span>Our Brands</span>
+            </a>
+          </div>
+
+          <!-- Quick Trust Badges -->
+          <div class="pt-8 border-t border-slate-800 grid grid-cols-3 gap-4 text-slate-300">
+            <div>
+              <p class="font-bold text-xl sm:text-2xl text-white">100%</p>
+              <p class="text-xs text-slate-400">Genuine Warranty</p>
+            </div>
+            <div>
+              <p class="font-bold text-xl sm:text-2xl text-white">8+ Top</p>
+              <p class="text-xs text-slate-400">National Brands</p>
+            </div>
+            <div>
+              <p class="font-bold text-xl sm:text-2xl text-white">Fast</p>
+              <p class="text-xs text-slate-400">Local Sirsa Delivery</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md bg-gradient-to-b from-slate-800/80 to-slate-900/90 p-6 rounded-3xl border border-slate-700/80 shadow-2xl backdrop-blur-xl">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-700/60">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                <span class="text-xs font-semibold text-slate-300">Verified Stock Available</span>
+              </div>
+              <span class="text-xs text-slate-400 font-mono">SIRSA, HR</span>
+            </div>
+
+            <!-- Showcase Item Preview inside Hero -->
+            <div class="mt-6 rounded-2xl overflow-hidden bg-slate-950/60 p-4 border border-slate-800">
+              <div class="h-48 overflow-hidden rounded-xl bg-slate-800 flex items-center justify-center relative">
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=700&q=80" alt="Kitchen Appliances" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 bg-brand-red text-white text-[11px] font-bold px-2 py-0.5 rounded">Featured Selection</span>
+              </div>
+              <div class="mt-4 flex justify-between items-end">
+                <div>
+                  <h2 class="text-base font-bold text-white">Kitchen & Home Essentials</h2>
+                  <p class="text-xs text-slate-400">Mixers, Chimneys, Geysers & Lighting</p>
+                </div>
+                <button onclick="window.location.href='#catalog'" class="text-xs text-brand-red font-semibold hover:underline flex items-center gap-1">
+                  View All <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-6 bg-slate-800/60 rounded-xl p-3.5 text-xs text-slate-300 flex items-center gap-3 border border-slate-700/40">
+              <i data-lucide="shield-check" class="w-6 h-6 text-emerald-400 flex-shrink-0"></i>
+              <span>All bulk and retail orders are fulfilled with genuine GST invoice & manufacturer coverage.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="brands" class="py-12 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-red">Authorised Partner Portfolio</h2>
+        <p class="text-2xl font-bold text-slate-900 mt-1">Official Brands Available at D.N. Agencies</p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 items-center">
+        <!-- Brand Badges representing the 8 visiting card brands -->
+        <button onclick="filterByBrand('HAVELLS')" class="brand-pill p-4 rounded-2xl border border-slate-200 hover:border-brand-red hover:shadow-md transition-all text-center flex flex-col items-center justify-center bg-slate-50/50 group">
+          <span class="font-extrabold text-base tracking-wider text-slate-800 group-hover:text-brand-red">HAVELLS</span>
+          <span class="text-[10px] text-slate-400 mt-0.5">Lighting & Fans</span>
+        </button>
+
+        <button onclick="filterByBrand('PHILIPS')" class="brand-pill p-4 rounded-2xl border border-slate-200 hover:border-brand-red hover:shadow-md transition-all text-center flex flex-col items-center justify-center bg-slate-50/50 group">
+          <span class="font-extrabold text-base tracking-wider text-blue-700 group-hover:scale-105">PHILIPS</span>
+          <span class="text-[10px] text-slate-400 mt-0.5">Grooming & Light</span>
+        </button>
+
+        <button onclick="filterByBrand('BAJAJ')" class="brand-pill p-4 rounded-2xl border border-slate-200 hover:border-brand-red hover:shadow-md transition-all text-center flex flex-col items-center justify-center bg-slate-50/50 group">
+          <span class="font-extrabold text-base tracking-wider text-blue-800 group-hover:scale-105">BAJAJ</span>
+          <span class="text-[10px] text-slate-400 mt-0.5">Geysers & Irons</span>
+        </button>
+
+        <button onclick="filterByBrand('ANCHOR')" class="brand-pill p-4 rounded-2xl border border-slate-200 hover:border-brand-red hover:shadow-md transition-all text-center flex flex-col items-center justify-center bg-slate-50/50 group">
+          <span class="font-extrabold text-base tracking-wider text-red-600 group-hover:scale-105">ANCHOR</span>
+          <span class="text-[10px] text-slate-400 mt-0.5">Panasonic Modular</span>
+        </button>
+
+        <button onclick="filterByBrand('SUJATA')" class="brand-pill p-4 rounded-2xl border border-slate-200 hover:border-brand-red hover:shadow-md transition-all text-center flex flex-col items-center justify-center bg-slate-50/50 group">
+          <span class="font-extrabold text-base tracking-wider text-emerald-800 group-hover:scale-105">SUJATA</span>
+          <span class="text-[10px] text-slate-400 mt-0.5">Mixers & Juicers</span>
+        </button>
+
+        <button onclick="filterByBrand('KAFF')" class="brand-pill p-4 rounded-2xl border border-slate-200 hover:border-brand-red hover:shadow-md transition-all text-center flex flex-col items-center justify-center bg-slate-50/50 group">
+          <span class="font-extrabold text-base tracking-wider text-slate-900 group-hover:scale-105">KAFF</span>
+          <span class="text-[10px] text-slate-400 mt-0.5">Chimneys & Hobs</span>
+        </button>
+
+        <button onclick="filterByBrand('AGARO')" class="brand-pill p-4 rounded-2xl border border-slate-200 hover:border-brand-red hover:shadow-md transition-all text-center flex flex-col items-center justify-center bg-slate-50/50 group">
+          <span class="font-extrabold text-base tracking-wider text-indigo-700 group-hover:scale-105">AGARO</span>
+          <span class="text-[10px] text-slate-400 mt-0.5">Air Fryers & Care</span>
+        </button>
+
+        <button onclick="filterByBrand('IKONIC')" class="brand-pill p-4 rounded-2xl border border-slate-200 hover:border-brand-red hover:shadow-md transition-all text-center flex flex-col items-center justify-center bg-slate-50/50 group">
+          <span class="font-extrabold text-base tracking-wider text-rose-700 group-hover:scale-105">IKONIC</span>
+          <span class="text-[10px] text-slate-400 mt-0.5">Salon & Styling</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <main id="catalog" class="flex-grow py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    
+    <!-- Section Header & Dynamic Filter Bar -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <div>
+        <div class="inline-flex items-center gap-1.5 text-brand-red font-semibold text-xs tracking-wider uppercase">
+          <i data-lucide="package-check" class="w-4 h-4"></i> Catalog & Inventory
+        </div>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Featured Wholesale & Retail Products</h2>
+        <p class="text-slate-500 text-sm mt-1">Select items, adjust quantities, and order seamlessly directly to our store desk.</p>
+      </div>
+
+      <!-- Live Search Box -->
+      <div class="relative w-full md:w-80">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search products or brands..." 
+          class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent text-sm bg-white shadow-sm"
+          oninput="handleSearch()"
+        />
+        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+      </div>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar text-sm">
+      <button onclick="filterCategory('All')" class="category-btn px-4 py-2 rounded-xl font-medium whitespace-nowrap transition bg-slate-900 text-white" data-cat="All">All Categories</button>
+      <button onclick="filterCategory('Kitchen Appliances')" class="category-btn px-4 py-2 rounded-xl font-medium whitespace-nowrap transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-cat="Kitchen Appliances">Kitchen Appliances</button>
+      <button onclick="filterCategory('Fans & Lighting')" class="category-btn px-4 py-2 rounded-xl font-medium whitespace-nowrap transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-cat="Fans & Lighting">Fans & Lighting</button>
+      <button onclick="filterCategory('Grooming & Personal Care')" class="category-btn px-4 py-2 rounded-xl font-medium whitespace-nowrap transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-cat="Grooming & Personal Care">Grooming & Personal Care</button>
+      <button onclick="filterCategory('Electricals & Switches')" class="category-btn px-4 py-2 rounded-xl font-medium whitespace-nowrap transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-cat="Electricals & Switches">Electricals & Switches</button>
+      <button onclick="filterCategory('Heating & Geysers')" class="category-btn px-4 py-2 rounded-xl font-medium whitespace-nowrap transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-cat="Heating & Geysers">Heating & Geysers</button>
+    </div>
+
+    <!-- Active Brand Filter Indicator if selected -->
+    <div id="activeBrandIndicator" class="hidden mb-6 flex items-center justify-between bg-red-50 text-brand-red-dark px-4 py-2 rounded-xl text-sm border border-red-100">
+      <span class="flex items-center gap-2">
+        <i data-lucide="tag" class="w-4 h-4"></i>
+        <span>Filtered by Brand: <strong id="activeBrandName"></strong></span>
+      </span>
+      <button onclick="clearBrandFilter()" class="text-xs font-bold underline hover:text-slate-900">Clear Brand Filter</button>
+    </div>
+
+    <!-- Product Grid Container -->
+    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- No Products Found State -->
+    <div id="noProductsFound" class="hidden py-16 text-center">
+      <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-3 text-slate-400">
+        <i data-lucide="inbox" class="w-8 h-8"></i>
+      </div>
+      <h3 class="text-lg font-bold text-slate-800">No matching products found</h3>
+      <p class="text-sm text-slate-500 mt-1">Try modifying your search or clearing category filters.</p>
+      <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-slate-900 text-white rounded-xl text-xs font-semibold hover:bg-brand-red transition">Reset All Filters</button>
+    </div>
+
+  </main>
+
+  <section id="about" class="py-16 bg-slate-100/70 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 text-brand-red font-bold text-xs uppercase tracking-wider">
+            <i data-lucide="award" class="w-4 h-4"></i> Authorised Distribution Excellence
+          </div>
+          <h2 class="text-3xl font-extrabold text-slate-900">Trusted Electrical & Appliance Wholesaler in Sirsa</h2>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Managed by <strong>Subhash Mehta</strong> & <strong>Ankit Mehta</strong>, <strong>D.N. AGENCIES</strong> is a prominent supply partner in Sirsa for retail buyers, builders, contractors, and household consumers. We specialize in genuine, certified equipment with manufacturers' pan-India warranties.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-red-50 text-brand-red flex items-center justify-center flex-shrink-0">
+                <i data-lucide="badge-percent" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-sm">Wholesale Pricing</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Competitive price points for retail & bulk procurement.</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-red-50 text-brand-red flex items-center justify-center flex-shrink-0">
+                <i data-lucide="truck" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-sm">Sirsa Local Delivery</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Same-day pickup or prompt doorstep delivery in Sirsa region.</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-red-50 text-brand-red flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-sm">Original Guarantee</h3>
+                <p class="text-xs text-slate-500 mt-0.5">100% original brand products with authorized seals & warranty.</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-red-50 text-brand-red flex items-center justify-center flex-shrink-0">
+                <i data-lucide="headset" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-sm">Direct Owner Support</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Personalised assistance from Subhash & Ankit Mehta.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl space-y-6">
+            <h3 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
+              <i data-lucide="building-2" class="w-5 h-5 text-brand-red"></i>
+              Store Address & Operations
+            </h3>
+
+            <div class="space-y-4 text-sm text-slate-600">
+              <div class="flex items-start gap-3">
+                <i data-lucide="map-pin" class="w-5 h-5 text-brand-red flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-slate-800">Physical Store Location:</p>
+                  <p>Adjoining Sharda Palace, Opposite Sant Nagar, Hisar Road, SIRSA, Haryana - 125055</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i data-lucide="phone-call" class="w-5 h-5 text-brand-red flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-slate-800">Direct Contact Numbers:</p>
+                  <p>Subhash Mehta: <a href="tel:9354210827" class="text-slate-900 font-semibold hover:underline">93542-10827</a></p>
+                  <p>Ankit Mehta: <a href="tel:9812001006" class="text-slate-900 font-semibold hover:underline">98120-01006</a></p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i data-lucide="mail" class="w-5 h-5 text-brand-red flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-slate-800">Email Inquiries:</p>
+                  <p><a href="mailto:dnagencies.742@gmail.com" class="text-brand-red font-medium hover:underline">dnagencies.742@gmail.com</a></p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i data-lucide="clock" class="w-5 h-5 text-brand-red flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-slate-800">Showroom Hours:</p>
+                  <p>Monday - Saturday: 9:30 AM - 8:30 PM (Sunday Open for Trade Inquiries)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs text-slate-500">
+              💡 <strong>Instant Order Confirmation:</strong> Once you click "Place Order" in checkout, your cart details are automatically transmitted directly to our sales dispatch phone (9354210827) for immediate verification and invoice dispatch.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Drawer Overlay -->
+  <div id="cartOverlay" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-slate-900/60 custom-backdrop z-50 hidden transition-opacity"></div>
+
+  <!-- Cart Slide-Over Drawer -->
+  <div id="cartDrawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+    <!-- Drawer Header -->
+    <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-brand-red"></i>
+        <h2 class="font-extrabold text-lg text-slate-900">Your Shopping Cart</h2>
+        <span id="drawerCountBadge" class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+      </div>
+      <button onclick="toggleCartDrawer(false)" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Items List -->
+    <div id="cartItemsList" class="flex-grow overflow-y-auto p-5 space-y-4 divide-y divide-slate-100">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <!-- Drawer Empty State -->
+    <div id="cartEmptyState" class="hidden flex-grow flex flex-col items-center justify-center p-8 text-center">
+      <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 mb-3">
+        <i data-lucide="shopping-cart" class="w-8 h-8"></i>
+      </div>
+      <p class="font-bold text-slate-800 text-lg">Your cart is empty</p>
+      <p class="text-sm text-slate-500 mt-1 max-w-xs">Explore our catalog of Havells, Philips, Sujata, and other leading brands to add items.</p>
+      <button onclick="toggleCartDrawer(false); window.location.href='#catalog';" class="mt-5 px-6 py-2.5 bg-brand-charcoal text-white rounded-xl text-sm font-semibold hover:bg-brand-red transition">Browse Catalog</button>
+    </div>
+
+    <!-- Drawer Footer / Summary -->
+    <div id="cartFooter" class="p-5 border-t border-slate-200 bg-slate-50 space-y-3">
+      <div class="flex justify-between items-center text-sm text-slate-600">
+        <span>Estimated Subtotal</span>
+        <span id="cartSubtotal" class="font-bold text-slate-900 text-base">₹0</span>
+      </div>
+      <div class="flex justify-between items-center text-xs text-emerald-600 font-medium">
+        <span>Delivery in Sirsa</span>
+        <span>Calculated / Free Local Pickup</span>
+      </div>
+      <div class="pt-2">
+        <button onclick="openCheckoutModal()" class="w-full py-3.5 bg-brand-red hover:bg-brand-red-dark text-white font-bold rounded-xl shadow-lg shadow-red-900/20 flex items-center justify-center gap-2 transition duration-200">
+          <span>Proceed to Checkout</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <p class="text-[11px] text-center text-slate-400">Secure direct order confirmation with D.N. AGENCIES</p>
+    </div>
+  </div>
+
+  <div id="checkoutModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+    <!-- Modal Backdrop -->
+    <div class="fixed inset-0 bg-slate-900/60 custom-backdrop" onclick="closeCheckoutModal()"></div>
+
+    <div class="flex min-h-full items-center justify-center p-4">
+      <div class="relative w-full max-w-lg rounded-3xl bg-white p-6 sm:p-8 shadow-2xl transition-all border border-slate-200 z-10">
+        
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-red-100 text-brand-red flex items-center justify-center">
+              <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-900">Delivery & Order Details</h3>
+              <p class="text-xs text-slate-500">Provide shipping address to place order</p>
+            </div>
+          </div>
+          <button onclick="closeCheckoutModal()" class="text-slate-400 hover:text-slate-700 p-1.5 rounded-lg">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Checkout Form (Standard eCommerce Experience - No WhatsApp branding) -->
+        <form id="checkoutForm" onsubmit="handlePlaceOrder(event)" class="mt-5 space-y-4">
+          
+          <div>
+            <label for="custName" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Full Name *</label>
+            <input 
+              type="text" 
+              id="custName" 
+              required 
+              placeholder="e.g. Ramesh Kumar" 
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="custPhone" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Mobile Number *</label>
+              <input 
+                type="tel" 
+                id="custPhone" 
+                required 
+                pattern="[0-9]{10}"
+                title="Please enter a valid 10-digit mobile number"
+                placeholder="10-digit Mobile No." 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none"
+              />
+            </div>
+            <div>
+              <label for="custCity" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">City / Town *</label>
+              <input 
+                type="text" 
+                id="custCity" 
+                required 
+                value="Sirsa" 
+                placeholder="Sirsa / District" 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="custAddress" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Delivery Address / Landmark *</label>
+            <textarea 
+              id="custAddress" 
+              rows="2" 
+              required 
+              placeholder="House/Shop No., Street Name, Near Landmark..." 
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none"
+            ></textarea>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Payment Preference</label>
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 transition">
+                <input type="radio" name="paymentMethod" value="UPI / Online Transfer" checked class="text-brand-red focus:ring-brand-red">
+                <span class="font-medium text-slate-800">UPI / Online Pay</span>
+              </label>
+              <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 transition">
+                <input type="radio" name="paymentMethod" value="Cash on Delivery / Pickup" class="text-brand-red focus:ring-brand-red">
+                <span class="font-medium text-slate-800">Pay on Delivery</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label for="custNotes" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Order Notes (Optional)</label>
+            <input 
+              type="text" 
+              id="custNotes" 
+              placeholder="e.g. Need GST Invoice / Deliver before 5 PM" 
+              class="w-full px-4 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-brand-red outline-none"
+            />
+          </div>
+
+          <!-- Order Summary inside Checkout -->
+          <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200 text-xs space-y-1.5">
+            <div class="flex justify-between text-slate-600">
+              <span>Items Total:</span>
+              <span id="modalTotal" class="font-bold text-slate-900">₹0</span>
+            </div>
+            <div class="flex justify-between text-slate-600">
+              <span>Fulfillment Desk:</span>
+              <span class="font-semibold text-slate-800">D.N. AGENCIES, Sirsa</span>
+            </div>
+          </div>
+
+          <!-- THE PLACE ORDER BUTTON - Pure eCommerce wording -->
+          <div class="pt-2">
+            <button 
+              type="submit" 
+              id="placeOrderBtn"
+              class="w-full py-4 bg-brand-red hover:bg-brand-red-dark text-white font-bold text-base rounded-xl shadow-lg shadow-red-900/30 flex items-center justify-center gap-2 transition duration-200"
+            >
+              <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+              <span>Place Order</span>
+            </button>
+          </div>
+          
+          <p class="text-[11px] text-center text-slate-400">
+            By clicking Place Order, your order invoice will be processed directly with Subhash Mehta (93542-10827).
+          </p>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-brand-charcoal text-white px-5 py-3.5 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-3">
+    <div id="toastIcon" class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center flex-shrink-0">
+      <i data-lucide="check" class="w-4 h-4"></i>
+    </div>
+    <div>
+      <p id="toastMessage" class="text-sm font-semibold text-white">Item added to cart</p>
+    </div>
+  </div>
+
+  <footer id="contact" class="bg-brand-charcoal text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center p-1.5">
+              <svg viewBox="0 0 100 100" class="w-full h-full fill-none">
+                <path d="M 22 20 L 48 20 C 65 20 74 32 74 50 C 74 68 65 80 48 80 L 22 80 Z" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" />
+                <path d="M 44 80 L 78 20" stroke="#D91B24" stroke-width="12" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div>
+              <span class="font-extrabold text-xl tracking-wider text-white">D.N.</span>
+              <span class="font-extrabold text-xl tracking-wider text-brand-red"> AGENCIES</span>
+            </div>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-400">
+            Authorised distributor & dealer of premier electrical goods, kitchen chimneys, mixer grinders, modular wiring, and personal grooming electronics in Sirsa.
+          </p>
+          <div class="text-xs text-slate-300 font-semibold space-y-1">
+            <p>• Subhash Mehta: <span class="text-white">93542-10827</span></p>
+            <p>• Ankit Mehta: <span class="text-white">98120-01006</span></p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Product Categories</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><button onclick="filterCategory('Kitchen Appliances'); window.location.href='#catalog'" class="hover:text-white transition">Kitchen Appliances & Juicers</button></li>
+            <li><button onclick="filterCategory('Fans & Lighting'); window.location.href='#catalog'" class="hover:text-white transition">Ceiling Fans & LED Lights</button></li>
+            <li><button onclick="filterCategory('Electricals & Switches'); window.location.href='#catalog'" class="hover:text-white transition">Modular Switches & Accessories</button></li>
+            <li><button onclick="filterCategory('Grooming & Personal Care'); window.location.href='#catalog'" class="hover:text-white transition">Hair Styling & Grooming Kits</button></li>
+            <li><button onclick="filterCategory('Heating & Geysers'); window.location.href='#catalog'" class="hover:text-white transition">Water Heaters & Geysers</button></li>
+          </ul>
+        </div>
+
+        <!-- Authorized Brands -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Associated Brands</h4>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <span class="bg-slate-800/80 px-2.5 py-1.5 rounded-lg border border-slate-700/60 text-center">HAVELLS</span>
+            <span class="bg-slate-800/80 px-2.5 py-1.5 rounded-lg border border-slate-700/60 text-center">PHILIPS</span>
+            <span class="bg-slate-800/80 px-2.5 py-1.5 rounded-lg border border-slate-700/60 text-center">BAJAJ</span>
+            <span class="bg-slate-800/80 px-2.5 py-1.5 rounded-lg border border-slate-700/60 text-center">ANCHOR</span>
+            <span class="bg-slate-800/80 px-2.5 py-1.5 rounded-lg border border-slate-700/60 text-center">SUJATA</span>
+            <span class="bg-slate-800/80 px-2.5 py-1.5 rounded-lg border border-slate-700/60 text-center">KAFF</span>
+            <span class="bg-slate-800/80 px-2.5 py-1.5 rounded-lg border border-slate-700/60 text-center">AGARO</span>
+            <span class="bg-slate-800/80 px-2.5 py-1.5 rounded-lg border border-slate-700/60 text-center">IKONIC</span>
+          </div>
+        </div>
+
+        <!-- Store Location & Email -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Sirsa Showroom</h4>
+          <p class="text-xs text-slate-400 mb-3">
+            Adjoining Sharda Palace,<br>
+            Opposite Sant Nagar, Hisar Road,<br>
+            SIRSA, Haryana - 125055
+          </p>
+          <p class="text-xs text-slate-300">
+            <strong>Email:</strong><br>
+            <a href="mailto:dnagencies.742@gmail.com" class="text-brand-red hover:underline">dnagencies.742@gmail.com</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <p>© 2026 D.N. AGENCIES. All rights reserved. Authorised Distributor.</p>
+        <p class="flex items-center gap-2">
+          <span>Sirsa, Haryana</span>
+          <span>·</span>
+          <span>Official Wholesale & Retail Distribution</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Product Catalog Database representing the 8 authorized brands from visiting card
+    const PRODUCTS = [
+      {
+        id: 'dn-01',
+        name: 'Sujata Powermatic Plus 900W Juicer Mixer Grinder',
+        brand: 'SUJATA',
+        category: 'Kitchen Appliances',
+        price: 5850,
+        originalPrice: 6990,
+        rating: 4.9,
+        reviews: 218,
+        image: 'https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=600&q=80',
+        badge: 'Top Seller',
+        description: '900 Watts high-torque motor with double ball bearings. Unmatched performance for Indian kitchen grinding.'
+      },
+      {
+        id: 'dn-02',
+        name: 'Havells Fabio 1200mm High Speed Ceiling Fan',
+        brand: 'HAVELLS',
+        category: 'Fans & Lighting',
+        price: 2450,
+        originalPrice: 3200,
+        rating: 4.7,
+        reviews: 145,
+        image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=600&q=80',
+        badge: 'Energy Star',
+        description: 'Aerodynamic ribbed aluminium blades with dust-resistant metallic lacquer finish and 100% copper motor.'
+      },
+      {
+        id: 'dn-03',
+        name: 'Philips Series 3000 All-in-One Trimmer & Grooming Kit',
+        brand: 'PHILIPS',
+        category: 'Grooming & Personal Care',
+        price: 1899,
+        originalPrice: 2495,
+        rating: 4.8,
+        reviews: 310,
+        image: 'https://images.unsplash.com/photo-1621607512214-68297480165e?auto=format&fit=crop&w=600&q=80',
+        badge: 'Best Value',
+        description: 'Self-sharpening stainless steel blades with 60 min cordless run time and 9 versatile styling attachments.'
+      },
+      {
+        id: 'dn-04',
+        name: 'Kaff Filterless Curved Glass Kitchen Chimney 60cm',
+        brand: 'KAFF',
+        category: 'Kitchen Appliances',
+        price: 12900,
+        originalPrice: 17990,
+        rating: 4.8,
+        reviews: 82,
+        image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80',
+        badge: 'Heavy Suction',
+        description: 'Thermal auto-clean technology, gesture motion control, and high airflow capacity for smokeless cooking.'
+      },
+      {
+        id: 'dn-05',
+        name: 'Ikonic Pro 2500W Professional Hair Dryer',
+        brand: 'IKONIC',
+        category: 'Grooming & Personal Care',
+        price: 3600,
+        originalPrice: 4500,
+        rating: 4.9,
+        reviews: 94,
+        image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80',
+        badge: 'Salon Grade',
+        description: 'Ultra-fast drying AC motor with ionic ceramic airflow reducing frizz for salon-perfect hair.'
+      },
+      {
+        id: 'dn-06',
+        name: 'Bajaj Shield 15 Litre Storage Water Geyser (5 Star)',
+        brand: 'BAJAJ',
+        category: 'Heating & Geysers',
+        price: 6499,
+        originalPrice: 8900,
+        rating: 4.7,
+        reviews: 130,
+        image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80',
+        badge: '5 Star Rated',
+        description: 'Glass-lined inner tank with titanium armor technology. Built specifically for high-rise buildings and hard water.'
+      },
+      {
+        id: 'dn-07',
+        name: 'Anchor Roma Classic 10A Modular Switch Set (Pack of 20)',
+        brand: 'ANCHOR',
+        category: 'Electricals & Switches',
+        price: 840,
+        originalPrice: 1100,
+        rating: 4.9,
+        reviews: 412,
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80',
+        badge: 'Genuine Panasonic',
+        description: 'Flame retardant polycarbonate material with silver cadmium contacts for long-lasting electrical safety.'
+      },
+      {
+        id: 'dn-08',
+        name: 'Agaro Royal Digital Air Fryer 4.5 Litres',
+        brand: 'AGARO',
+        category: 'Kitchen Appliances',
+        price: 4299,
+        originalPrice: 5999,
+        rating: 4.6,
+        reviews: 98,
+        image: 'https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=600&q=80',
+        badge: 'Oil Free',
+        description: '360° rapid air circulation with 8 preset cooking programs and non-stick dishwasher-safe basket.'
+      },
+      {
+        id: 'dn-09',
+        name: 'Havells Adore 15W LED Batten Tubelight (Pack of 4)',
+        brand: 'HAVELLS',
+        category: 'Fans & Lighting',
+        price: 990,
+        originalPrice: 1400,
+        rating: 4.8,
+        reviews: 167,
+        image: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=600&q=80',
+        badge: 'Surge Protected',
+        description: 'High lumen output, eye-soft flicker-free illumination with integrated 4kV surge protection.'
+      },
+      {
+        id: 'dn-10',
+        name: 'Bajaj DX-7 1000W Heavyweight Dry Iron',
+        brand: 'BAJAJ',
+        category: 'Kitchen Appliances',
+        price: 1150,
+        originalPrice: 1490,
+        rating: 4.7,
+        reviews: 280,
+        image: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=600&q=80',
+        badge: 'Durable',
+        description: 'Non-stick American Heritage golden coated soleplate with 360 degree swivel cord.'
+      }
+    ];
+
+    // Target merchant WhatsApp number (Subhash Mehta - D.N. AGENCIES)
+    const TARGET_WHATSAPP_NUMBER = "919354210827";
+
+    // Application State
+    let currentCategory = 'All';
+    let currentBrand = null;
+    let searchQuery = '';
+    let cart = [];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadCartFromStorage();
+      renderProducts();
+      updateCartUI();
+      lucide.createIcons();
+    });
+
+    function saveCartToStorage() {
+      try {
+        localStorage.setItem('dn_agencies_cart', JSON.stringify(cart));
+      } catch (e) {
+        console.warn('LocalStorage error:', e);
+      }
+    }
+
+    function loadCartFromStorage() {
+      try {
+        const saved = localStorage.getItem('dn_agencies_cart');
+        if (saved) {
+          cart = JSON.parse(saved);
+        }
+      } catch (e) {
+        cart = [];
+      }
+    }
+
+    function filterCategory(category) {
+      currentCategory = category;
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        if (btn.getAttribute('data-cat') === category) {
+          btn.className = 'category-btn px-4 py-2 rounded-xl font-medium whitespace-nowrap transition bg-slate-900 text-white';
+        } else {
+          btn.className = 'category-btn px-4 py-2 rounded-xl font-medium whitespace-nowrap transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200';
+        }
+      });
+      renderProducts();
+    }
+
+    function filterByBrand(brand) {
+      currentBrand = brand;
+      const indicator = document.getElementById('activeBrandIndicator');
+      const brandName = document.getElementById('activeBrandName');
+      indicator.classList.remove('hidden');
+      brandName.textContent = brand;
+      window.location.href = '#catalog';
+      renderProducts();
+    }
+
+    function clearBrandFilter() {
+      currentBrand = null;
+      document.getElementById('activeBrandIndicator').classList.add('hidden');
+      renderProducts();
+    }
+
+    function resetFilters() {
+      currentCategory = 'All';
+      currentBrand = null;
+      searchQuery = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('activeBrandIndicator').classList.add('hidden');
+      filterCategory('All');
+    }
+
+    function handleSearch() {
+      searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+      renderProducts();
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      const emptyState = document.getElementById('noProductsFound');
+      
+      const filtered = PRODUCTS.filter(p => {
+        const matchesCategory = currentCategory === 'All' || p.category === currentCategory;
+        const matchesBrand = !currentBrand || p.brand === currentBrand;
+        const matchesSearch = !searchQuery || 
+          p.name.toLowerCase().includes(searchQuery) || 
+          p.brand.toLowerCase().includes(searchQuery) ||
+          p.category.toLowerCase().includes(searchQuery);
+        return matchesCategory && matchesBrand && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      grid.innerHTML = filtered.map(item => {
+        const discount = Math.round(((item.originalPrice - item.price) / item.originalPrice) * 100);
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200 hover:border-slate-300 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+            
+            <!-- Image Area -->
+            <div class="relative h-48 bg-slate-100 overflow-hidden">
+              <img 
+                src="${item.image}" 
+                alt="${item.name}" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='https://placehold.co/600x400/2B3137/ffffff?text=${encodeURIComponent(item.brand)}'"
+              />
+              <span class="absolute top-3 left-3 bg-brand-charcoal text-white text-[10px] font-bold tracking-wider px-2 py-1 rounded uppercase">
+                ${item.brand}
+              </span>
+              ${item.badge ? `
+                <span class="absolute top-3 right-3 bg-brand-red text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">
+                  ${item.badge}
+                </span>
+              ` : ''}
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-5 flex-grow flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center gap-1.5 text-amber-500 text-xs mb-1.5">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <span class="font-bold text-slate-800">${item.rating}</span>
+                  <span class="text-slate-400">(${item.reviews} verified)</span>
+                </div>
+                <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-brand-red transition-colors line-clamp-2">
+                  ${item.name}
+                </h3>
+                <p class="text-xs text-slate-500 mt-2 line-clamp-2">${item.description}</p>
+              </div>
+
+              <div class="pt-3 border-t border-slate-100 space-y-3">
+                <div class="flex items-baseline justify-between">
+                  <div>
+                    <span class="text-lg font-black text-slate-900">₹${item.price.toLocaleString('en-IN')}</span>
+                    <span class="text-xs text-slate-400 line-through ml-1.5">₹${item.originalPrice.toLocaleString('en-IN')}</span>
+                  </div>
+                  <span class="text-xs font-bold text-emerald-600">${discount}% OFF</span>
+                </div>
+
+                <!-- Add to Cart Button (Standard eCommerce styling) -->
+                <button 
+                  onclick="addToCart('${item.id}')" 
+                  class="w-full py-2.5 px-4 bg-slate-900 hover:bg-brand-red text-white text-xs font-bold rounded-xl transition duration-200 flex items-center justify-center gap-2 shadow-sm"
+                >
+                  <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function addToCart(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      const existingIndex = cart.findIndex(item => item.id === productId);
+      if (existingIndex > -1) {
+        cart[existingIndex].quantity += 1;
+      } else {
+        cart.push({
+          id: product.id,
+          name: product.name,
+          brand: product.brand,
+          price: product.price,
+          image: product.image,
+          quantity: 1
+        });
+      }
+
+      saveCartToStorage();
+      updateCartUI();
+      showToast(`Added "${product.name}" to cart`);
+    }
+
+    function updateItemQuantity(productId, delta) {
+      const index = cart.findIndex(item => item.id === productId);
+      if (index === -1) return;
+
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+
+      saveCartToStorage();
+      updateCartUI();
+    }
+
+    function removeFromCart(productId) {
+      cart = cart.filter(item => item.id !== productId);
+      saveCartToStorage();
+      updateCartUI();
+      showToast('Item removed from cart');
+    }
+
+    function calculateTotal() {
+      return cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const totalAmount = calculateTotal();
+
+      // Update Badges
+      document.getElementById('cartCountBadge').textContent = totalCount;
+      document.getElementById('drawerCountBadge').textContent = totalCount;
+      document.getElementById('cartSubtotal').textContent = `₹${totalAmount.toLocaleString('en-IN')}`;
+      document.getElementById('modalTotal').textContent = `₹${totalAmount.toLocaleString('en-IN')}`;
+
+      // Update Drawer View
+      const itemsContainer = document.getElementById('cartItemsList');
+      const emptyState = document.getElementById('cartEmptyState');
+      const footer = document.getElementById('cartFooter');
+
+      if (cart.length === 0) {
+        itemsContainer.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        footer.classList.add('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+        footer.classList.remove('hidden');
+
+        itemsContainer.innerHTML = cart.map(item => `
+          <div class="pt-4 first:pt-0 flex gap-3.5 items-center">
+            <img 
+              src="${item.image}" 
+              alt="${item.name}" 
+              class="w-16 h-16 rounded-xl object-cover bg-slate-100 border border-slate-200 flex-shrink-0"
+              onerror="this.src='https://placehold.co/100x100/2B3137/ffffff?text=${encodeURIComponent(item.brand)}'"
+            />
+            <div class="flex-grow">
+              <span class="text-[10px] font-bold text-brand-red uppercase">${item.brand}</span>
+              <h4 class="text-xs font-bold text-slate-800 line-clamp-1">${item.name}</h4>
+              <p class="text-xs font-extrabold text-slate-900 mt-1">₹${(item.price * item.quantity).toLocaleString('en-IN')}</p>
+              
+              <div class="flex items-center gap-3 mt-2">
+                <div class="flex items-center border border-slate-200 rounded-lg bg-slate-50">
+                  <button onclick="updateItemQuantity('${item.id}', -1)" class="w-6 h-6 flex items-center justify-center text-slate-600 hover:bg-slate-200 rounded-l-lg font-bold text-xs">-</button>
+                  <span class="px-2 text-xs font-semibold text-slate-800">${item.quantity}</span>
+                  <button onclick="updateItemQuantity('${item.id}', 1)" class="w-6 h-6 flex items-center justify-center text-slate-600 hover:bg-slate-200 rounded-r-lg font-bold text-xs">+</button>
+                </div>
+                <button onclick="removeFromCart('${item.id}')" class="text-slate-400 hover:text-rose-600 text-xs transition" title="Remove Item">
+                  <i data-lucide="trash-2" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+        lucide.createIcons();
+      }
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartDrawer');
+      const overlay = document.getElementById('cartOverlay');
+
+      if (open) {
+        overlay.classList.remove('hidden');
+        drawer.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      } else {
+        overlay.classList.add('hidden');
+        drawer.classList.add('translate-x-full');
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
+    function openCheckoutModal() {
+      if (cart.length === 0) {
+        showToast('Your cart is empty');
+        return;
+      }
+      toggleCartDrawer(false);
+      document.getElementById('checkoutModal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function handlePlaceOrder(event) {
+      event.preventDefault();
+
+      if (cart.length === 0) {
+        showToast('Cart is empty. Please add products.');
+        closeCheckoutModal();
+        return;
+      }
+
+      // Collect user form details
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const city = document.getElementById('custCity').value.trim();
+      const address = document.getElementById('custAddress').value.trim();
+      const notes = document.getElementById('custNotes').value.trim();
+      
+      const paymentElement = document.querySelector('input[name="paymentMethod"]:checked');
+      const paymentPref = paymentElement ? paymentElement.value : 'UPI / Online Transfer';
+
+      const totalAmount = calculateTotal();
+      const orderDate = new Date().toLocaleDateString('en-IN', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+
+      // Construct a clean, professional order invoice text
+      let itemLines = '';
+      cart.forEach((item, idx) => {
+        const itemSubtotal = item.price * item.quantity;
+        itemLines += `${idx + 1}. *${item.brand}* - ${item.name}\n   Qty: ${item.quantity} × ₹${item.price.toLocaleString('en-IN')} = *₹${itemSubtotal.toLocaleString('en-IN')}*\n`;
+      });
+
+      const message = 
+`📦 *NEW ORDER INVOICE - D.N. AGENCIES*
+Adjoining Sharda Palace, Hisar Road, Sirsa
+----------------------------------------
+📅 *Date:* ${orderDate}
+
+👤 *CUSTOMER INFORMATION:*
+• *Name:* ${name}
+• *Phone:* ${phone}
+• *City / Area:* ${city}
+• *Delivery Address:* ${address}
+${notes ? `• *Special Note:* ${notes}\n` : ''}
+🛒 *ORDERED ITEMS:*
+${itemLines}
+----------------------------------------
+💰 *GRAND TOTAL:* ₹${totalAmount.toLocaleString('en-IN')}
+💳 *Payment Mode:* ${paymentPref}
+----------------------------------------
+Kindly confirm product availability, GST invoice details, and local delivery / dispatch schedule. Thank you!`;
+
+      // Formulate target WhatsApp URL for 9354210827
+      const whatsappUrl = `https://wa.me/${TARGET_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+      // Provide instant user confirmation toast
+      showToast('Order confirmed! Redirecting to merchant...');
+
+      // Close modal
+      closeCheckoutModal();
+
+      // Open WhatsApp directly with pre-populated order invoice
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+      }, 500);
+    }
+
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMessage');
+      
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
+```
